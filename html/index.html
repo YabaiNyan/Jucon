@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WebConX</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+</head>
+<body>
+    <div id="vol">
+        <button ontouchstart="btdown('start')" ontouchend="btup('start')" class="start-btn">start</button>
+    </div>
+    <div id="vol-bt-spc"></div>
+    <div id="bt">
+        <div id="bt-container">
+            <button ontouchstart="btdown('a')" ontouchend="btup('a')" class="bt-btn">BT-A</button>
+            <div class="bt-spc"></div>
+            <button ontouchstart="btdown('b')" ontouchend="btup('b')" class="bt-btn">BT-B</button>
+            <div class="bt-spc"></div>
+            <button ontouchstart="btdown('c')" ontouchend="btup('c')" class="bt-btn">BT-C</button>
+            <div class="bt-spc"></div>
+            <button ontouchstart="btdown('d')" ontouchend="btup('d')" class="bt-btn">BT-D</button>
+        </div>
+    </div>
+    <div id="bt-fx-spc"></div>
+    <div id="fx">
+        <div id="bt-container">
+            <button ontouchstart="btdown('fxa')" ontouchend="btup('fxa')" class="fx-btn">FX-A</button>
+            <div class="fx-spc"></div>
+            <button ontouchstart="btdown('fxb')" ontouchend="btup('fxa')" class="fx-btn">FX-B</button>
+        </div>
+    </div>
+</body>
+</html>
