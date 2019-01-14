@@ -16,62 +16,41 @@ body{
     margin: 0;
 }
 
-#vol{
-    background: red;
-    height: 25vh;
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
     text-align: center;
 }
 
-#vol-bt-spc{
-    height:10vh;
+@media screen and (orientation:portrait) { 
+    tr{
+        height: calc(100vw/4);
+    }
+    td{
+        height: calc(100vw/4);
+        width: calc(100vw/4);
+    }
 }
 
-#bt{
-    background: blue;
-    height: 30vh;
-    text-align: center;
-}
-
-#bt-fx-spc{
-    height:20vh;
-}
-
-#fx{
-    background: green;
-    height: 15vh;
-    text-align: center;
+@media screen and (orientation:landscape) { 
+    tr{
+        height: calc(100vh/4);
+    }
+    td{
+        height: calc(100vh/4);
+        width: calc(100vh/4);
+    }
 }
 
 .bt-btn{
     display: inline-block;
-    height: 30vh;
-    width: 30vh;
+    height: 100%;
+    width: 100%;
 }
 
-.bt-spc{
+/*
+.bt-btn{
     display: inline-block;
-    height: 1vh;
-    width: calc((100vw - 120vh)/4);
+    height: 25vw;
+    width: 25vw;
 }
-
-.fx-btn{
-    display: inline-block;
-    height: 15vh;
-    width: 30vh;
-}
-
-.fx-spc{
-    display: inline-block;
-    height: 1vh;
-    width: 55vh;
-}
-
-.start-btn{
-    height: 25vh;
-    width: 25vh;
-}
-
-#bt-container{
-    display: inline-block;
-}
-
+*/

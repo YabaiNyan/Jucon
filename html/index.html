@@ -10,28 +10,33 @@
     <meta name="viewport" content="width=device-width, user-scalable=no" />
 </head>
 <body>
-    <div id="vol">
-        <button ontouchstart="btdown('start')" ontouchend="btup('start')" class="start-btn">start</button>
-    </div>
-    <div id="vol-bt-spc"></div>
-    <div id="bt">
-        <div id="bt-container">
-            <button ontouchstart="btdown('a')" ontouchend="btup('a')" class="bt-btn">BT-A</button>
-            <div class="bt-spc"></div>
-            <button ontouchstart="btdown('b')" ontouchend="btup('b')" class="bt-btn">BT-B</button>
-            <div class="bt-spc"></div>
-            <button ontouchstart="btdown('c')" ontouchend="btup('c')" class="bt-btn">BT-C</button>
-            <div class="bt-spc"></div>
-            <button ontouchstart="btdown('d')" ontouchend="btup('d')" class="bt-btn">BT-D</button>
-        </div>
-    </div>
-    <div id="bt-fx-spc"></div>
-    <div id="fx">
-        <div id="bt-container">
-            <button ontouchstart="btdown('fxa')" ontouchend="btup('fxa')" class="fx-btn">FX-A</button>
-            <div class="fx-spc"></div>
-            <button ontouchstart="btdown('fxb')" ontouchend="btup('fxa')" class="fx-btn">FX-B</button>
-        </div>
-    </div>
+    <table>
+        <tbody>
+            <tr>
+                <td><button ontouchstart="btdown('1')" ontouchend="btup('a')" class="bt-btn"></button>     </div></td>
+                <td><button ontouchstart="btdown('2')" ontouchend="btup('a')" class="bt-btn"></button>     </div></td>
+                <td><button ontouchstart="btdown('3')" ontouchend="btup('a')" class="bt-btn"></button>     </div></td>
+                <td><button ontouchstart="btdown('4')" ontouchend="btup('a')" class="bt-btn"></button>     </div></td>
+            </tr>
+            <tr>
+                <td><button ontouchstart="btdown('q')" ontouchend="btup('a')" class="bt-btn"></button>     </div></td>
+                <td><button ontouchstart="btdown('w')" ontouchend="btup('a')" class="bt-btn"></button>     </div></td>
+                <td><button ontouchstart="btdown('e')" ontouchend="btup('a')" class="bt-btn"></button>     </div></td>
+                <td><button ontouchstart="btdown('r')" ontouchend="btup('a')" class="bt-btn"></button>     </div></td>
+            </tr>
+            <tr>
+                <td><button ontouchstart="btdown('a')" ontouchend="btup('a')" class="bt-btn"></button>     </div></td>
+                <td><button ontouchstart="btdown('s')" ontouchend="btup('a')" class="bt-btn"></button>     </div></td>
+                <td><button ontouchstart="btdown('d')" ontouchend="btup('a')" class="bt-btn"></button>     </div></td>
+                <td><button ontouchstart="btdown('f')" ontouchend="btup('a')" class="bt-btn"></button>     </div></td>
+            </tr>
+            <tr>
+                <td><button ontouchstart="btdown('z')" ontouchend="btup('a')" class="bt-btn"></button>     </div></td>
+                <td><button ontouchstart="btdown('x')" ontouchend="btup('a')" class="bt-btn"></button>     </div></td>
+                <td><button ontouchstart="btdown('c')" ontouchend="btup('a')" class="bt-btn"></button>     </div></td>
+                <td><button ontouchstart="btdown('v')" ontouchend="btup('a')" class="bt-btn"></button>     </div></td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 </html>

@@ -1,8 +1,8 @@
 {
-  "name": "webcon-x",
+  "name": "jucon",
   "version": "1.0.0",
-  "description": "web controller for sdvx",
-  "main": "webconx.js",
+  "description": "web controller for jubeat",
+  "main": "jucon.js",
   "dependencies": {
     "connect": "^3.6.6",
     "robotjs": "^0.5.1",
@@ -11,16 +11,16 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node jucon.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/YabaiNyan/webcon-x.git"
+    "url": "git+https://github.com/YabaiNyan/Jucon.git"
   },
   "author": "YabaiNyan",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/YabaiNyan/webcon-x/issues"
+    "url": "https://github.com/YabaiNyan/Jucon/issues"
   },
-  "homepage": "https://github.com/YabaiNyan/webcon-x#readme"
+  "homepage": "https://github.com/YabaiNyan/Jucon#readme"
 }

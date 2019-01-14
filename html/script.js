@@ -5,19 +5,9 @@ ws.onmessage = function (event) {
 };
 
 function btdown(key){
-    ws.send("1"+keydict[key])
+    ws.send("1"+key)
 }
 
 function btup(key){
-    ws.send("0"+keydict[key])
+    ws.send("0"+key)
 }
-
-var keydict = {
-    "a": "d",
-    "b": "f",
-    "c": "j",
-    "d": "k",
-    "fxa": "c",
-    "fxb": "m",
-    "start": "1"
-};
