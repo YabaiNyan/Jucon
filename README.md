@@ -1,4 +1,4 @@
-# webcon-x
+# jucon.js
 Web Controller for Sound Voltex
 
 ## Note
