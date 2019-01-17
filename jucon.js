@@ -1,28 +1,29 @@
+var argument = process.argv[2];
+
 //require
 var robot = require("robotjs");
 var connect = require('connect');
 var serveStatic = require('serve-static');
 const WebSocket = require('ws');
 var os = require('os');
-const SerialPort = require('serialport')
-const Readline = require('@serialport/parser-readline')
-const port = new SerialPort("COM4", { baudRate: 256000 })
-const parser = new Readline()
-port.pipe(parser)
+var SerialPort, Readline, port, parser;
+if(argument != "softinput"){
+  SerialPort = require('serialport')
+  Readline = require('@serialport/parser-readline')
+  port = new SerialPort("COM4", { baudRate: 256000 })
+  parser = new Readline()
+  port.pipe(parser)
+  parser.on('data', line => console.log(`> ${line}`))
+}
 
 //package configs
 robot.setKeyboardDelay(1);
 const wss = new WebSocket.Server({ port: 1337 });
 
-var argument = process.argv[2];
-
 //html sever
 connect().use(serveStatic(__dirname+"/html")).listen(8080, function(){
     console.log('HTML Server is running on http://' + getipv4() + ':8080');
 });
-
-//serial handler
-parser.on('data', line => console.log(`> ${line}`))
 
 //websocket handler 
 if(argument == "softinput"){
