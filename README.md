@@ -14,7 +14,7 @@ Then open a terminal and type</br>
 ```cd jucon```</br>
 ```npm install```</br>
 
-To run the server, type ```node jucon.js``` (or ```node jucon.js softinput``` for pure software input)into the terminal, open on a touch device the link logged in the terminal.</br>
+To run the server, type ```node jucon.js``` (or ```node jucon.js softinput``` for pure software input) into the terminal, open on a touch device the link logged in the terminal.</br>
 
 ## Note for connection
 The device has to be on the same local network as the server.
