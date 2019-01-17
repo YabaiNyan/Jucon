@@ -47,7 +47,14 @@ function touchleave(e){
         ws.send(">" + touchobj[touchId])
         document.getElementById(touchobj[touchId]).style.backgroundImage="url('idle.png')"
     }
-    touchobj[touchId]=null
+    if(e.touches.length == 0 && Object.keys(touchobj).length > 0){
+        for (var varkey in touchobj){
+            if (touchobj[varkey] == touchobj[touchId]){
+                delete touchobj[varkey]
+            }
+        }
+    }
+    delete touchobj[touchId]
     e.preventDefault();
 }
 
