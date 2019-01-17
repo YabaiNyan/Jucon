@@ -14,6 +14,7 @@ port.pipe(parser)
 robot.setKeyboardDelay(1);
 const wss = new WebSocket.Server({ port: 1337 });
 
+var argument = process.argv[2];
 
 //html sever
 connect().use(serveStatic(__dirname+"/html")).listen(8080, function(){
@@ -24,15 +25,34 @@ connect().use(serveStatic(__dirname+"/html")).listen(8080, function(){
 parser.on('data', line => console.log(`> ${line}`))
 
 //websocket handler 
-wss.on('connection', function connection(ws) {
-  ws.on('message', function incoming(message) {
-    if(message.startsWith("!")){
-      console.log(message)
-    }else{
-      port.write(message)
-    }
+if(argument == "softinput"){
+  console.log("enabling software input mode")
+  wss.on('connection', function connection(ws) {
+    ws.on('message', function incoming(message) {
+      if(message.startsWith("!")){
+        console.log(message)
+      }else{
+        var splitmsg = message.split("")
+        if(splitmsg[0] == "<"){
+          robot.keyToggle(splitmsg[1], 'down')
+        }else{
+          robot.keyToggle(splitmsg[1], 'up')
+        }
+      }
+    });
   });
-});
+}else{
+  wss.on('connection', function connection(ws) {
+    ws.on('message', function incoming(message) {
+      if(message.startsWith("!")){
+        console.log(message)
+      }else{
+        port.write(message)
+      }
+    });
+  });
+}
+
 
 //getipv4
 function getipv4(){
