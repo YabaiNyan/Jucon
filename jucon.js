@@ -4,7 +4,11 @@ var connect = require('connect');
 var serveStatic = require('serve-static');
 const WebSocket = require('ws');
 var os = require('os');
-
+const SerialPort = require('serialport')
+const Readline = require('@serialport/parser-readline')
+const port = new SerialPort("COM4", { baudRate: 256000 })
+const parser = new Readline()
+port.pipe(parser)
 
 //package configs
 robot.setKeyboardDelay(1);
@@ -16,18 +20,16 @@ connect().use(serveStatic(__dirname+"/html")).listen(8080, function(){
     console.log('HTML Server is running on http://' + getipv4() + ':8080');
 });
 
+//serial handler
+parser.on('data', line => console.log(`> ${line}`))
 
 //websocket handler 
 wss.on('connection', function connection(ws) {
   ws.on('message', function incoming(message) {
-    var arr = message.split("");
-    switch(arr[0]){
-        case "1":
-            robot.keyToggle(arr[1], "down")
-        break
-        case "0":
-            robot.keyToggle(arr[1], "up")
-        break
+    if(message.startsWith("!")){
+      console.log(message)
+    }else{
+      port.write(message)
     }
   });
 });

@@ -29,7 +29,7 @@ body{
     }
     td{
         height: calc(100vw/4);
-        width: calc(100vw/4);
+        width: calc(100vh/4);
     }
 }
 
@@ -39,7 +39,7 @@ body{
     }
     td{
         height: calc(100vh/4);
-        width: calc(100vh/4);
+        width: calc(100vw/4);
     }
 }
 
