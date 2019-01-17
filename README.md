@@ -4,6 +4,7 @@ Web Controller for Sound Voltex
 ## Note
 Note that currently the code is meant to be used in conjunction with an arduino-compatible board so that phyiscal keypressed work.
 Currently tested on a teensy 2++ with teensyduino. Please upload /teensy_serial_hid/teensy_serial_hid.ino to an arduino that supports keyboard emulation, then replace `COM4` in jucon.js with the serial identifier of the arduino.
+If physical keyboard inputs are not required, you can start the script with `node jucon.js softinput` to use robotjs software input instead.
 
 # Installation
 You'll need to first install [nodeJS](https://nodejs.org/en/download/ "Click here to goto the nodeJS download page") on the computer you plan to use this on.</br>
